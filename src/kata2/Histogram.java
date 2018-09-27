@@ -10,6 +10,7 @@ import java.util.HashMap;
  *
  * @author Usuario
  */
+//funcionaba de todas maneras con los tipos genericos
 public class Histogram <T>{
     private final String [] data;
 
