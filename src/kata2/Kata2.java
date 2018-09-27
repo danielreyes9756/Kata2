@@ -19,15 +19,9 @@ public class Kata2 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        int [] data = {1,1,3,4,2,1,3,5,4,1,2,3,5,4,1};
-        int numMasGrande = 10;
-        Map<Integer,Integer>histogram = new HashMap<Integer,Integer>();
         
-        for (int key : data) {
-            histogram.put(key,histogram.containsKey(key) ? histogram.get(key)+1 : 1);
-        }
+       Histogram histogram = new Histogram(new int [] {1,2,3,4,5,2,2,3,1,2,});
+        System.out.println(histogram.getHistogram());
        
-        histogram.forEach((k,v) -> System.out.println("Key: " + k + ": Value: " + v));
     }
-    
 }
