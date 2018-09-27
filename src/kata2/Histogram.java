@@ -11,19 +11,19 @@ import java.util.HashMap;
  * @author Usuario
  */
 public class Histogram <T>{
-    private final T [] data;
+    private final String [] data;
 
-    public Histogram(T [] data) {
+    public Histogram(String [] data) {
         this.data = data;
     }
     
-    public T [] getData() {
+    public String [] getData() {
         return data;
     }
     
-    public Map<T,Integer> getHistogram() {
-        Map<T,Integer> res = new HashMap<>();
-        for (T key : data) {
+    public Map<String,Integer> getHistogram() {
+        Map<String,Integer> res = new HashMap<>();
+        for (String key : data) {
             res.put(key,res.containsKey(key) ? res.get(key)+1 : 1);
         }
         return res;
