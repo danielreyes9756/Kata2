@@ -22,14 +22,11 @@ public class Kata2 {
         int [] data = {1,1,3,4,2,1,3,5,4,1,2,3,5,4,1};
         int numMasGrande = 10;
         Map<Integer,Integer>histogram = new HashMap<Integer,Integer>();
-
-        for (int i = 0; i < data.length; i++) {
-            if(histogram.containsKey(data[i])) {
-                histogram.put(data[i],histogram.get(data[i])+1);
-            } else {
-                histogram.put(data[i],1);
-            }
+        
+        for (int key : data) {
+            histogram.put(key,histogram.containsKey(key) ? histogram.get(key)+1 : 1);
         }
+       
         histogram.forEach((k,v) -> System.out.println("Key: " + k + ": Value: " + v));
     }
     
